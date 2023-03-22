@@ -7,7 +7,9 @@
   --accent: #e7e9fc;
   --white: #ffffff;
   --light: #f4f4fd;
+  --subtitle-text: #8e8f99;
   --pressed: #404bbf;
+  --success: #31d0aa;
 
   --card-set-gap: 24px;
 }
@@ -32,6 +34,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul {
   margin: 0;
@@ -155,7 +159,16 @@ img {
   margin: 0 auto;
   padding: 188px 0;
 
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
   background-color: var(--dark-beckground-color);
+
   color: var(--white);
   text-align: center;
 }
@@ -216,6 +229,8 @@ img {
   background-color: var(--pressed);
   color: var(--white);
   outline: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* .button.primery {
@@ -235,7 +250,16 @@ img {
 }
 
 .features-title {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .features-list {
@@ -245,6 +269,14 @@ img {
 
 .features-list > .features-item {
   flex-basis: calc((100% - 72px) / 4);
+}
+
+.feature-icon {
+  margin-bottom: 8px;
+  padding: 24px 100px;
+  border-radius: 4px;
+
+  background-color: var(--light);
 }
 
 .description-title {
@@ -298,6 +330,8 @@ img {
 .team-list-item {
   padding-bottom: 32px;
   text-align: center;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--white);
@@ -307,6 +341,79 @@ img {
   margin-top: 32px;
 }
 
+.social-links {
+  margin-top: 8px;
+}
+
+.social-link-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primery-brand);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--pressed);
+  outline: none;
+}
+
+.social-link-icon {
+  fill: var(--light);
+}
+
+/* section 4 */
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-title {
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--subtitle-text);
+  border-radius: 4px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  color: var(--pressed);
+  border-color: var(--pressed);
+}
+
+.customers-icon {
+  fill: var(--subtitle-text);
+}
+
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+  fill: var(--pressed);
+}
+
 /* footer */
 .footer {
   padding-top: 100px;
@@ -314,6 +421,14 @@ img {
 
   background-color: var(--dark-beckground-color);
   color: var(--accent);
+}
+
+.footer-content {
+  display: flex;
+}
+
+.footer-logo {
+  width: 264px;
 }
 
 .decoration-color-footer {
@@ -328,6 +443,44 @@ img {
   letter-spacing: 0.02em;
 }
 
+.footer-social-links {
+  width: 208px;
+  margin-left: 120px;
+}
+
+.soc-link-text {
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--success);
+  outline: none;
+}
+
+.footer-social-icon {
+  fill: var(--light);
+}
+
 /* Portfolio */
 .portfolio-hero {
   padding-top: 96px;
@@ -335,7 +488,16 @@ img {
 }
 
 .portfolio-main {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* portfolio nav */
@@ -361,6 +523,11 @@ img {
 
 .portfolio-list > .portfolio-item {
   flex-basis: calc((100% - 48px) / 3);
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-content {
