@@ -350,6 +350,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 24px;
+  margin-top: 8px;
 }
 
 .social-link {
@@ -378,15 +379,12 @@ img {
   padding-bottom: 120px;
 }
 
-.customers-title {
-  margin-bottom: 72px;
-}
-
 .customers-list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
+  margin-top: 72px;
 }
 
 .customers-link {
@@ -425,6 +423,7 @@ img {
 
 .footer-content {
   display: flex;
+  align-items: flex-start;
 }
 
 .footer-logo {
@@ -451,7 +450,6 @@ img {
 .soc-link-text {
   font-weight: 500;
   color: var(--white);
-  margin-bottom: 16px;
 }
 
 .footer-social-list {
@@ -459,6 +457,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 16px;
+  margin-top: 16px;
 }
 
 .footer-social-link {
